@@ -1,0 +1,1 @@
+export default function Page() { return <div>app/student/attendance page</div>; }

@@ -1,0 +1,1 @@
+export const mockUser = { email: 'demo@student.com', role: 'student' };

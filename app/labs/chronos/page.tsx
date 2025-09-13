@@ -1,0 +1,1 @@
+export default function Page() { return <div>app/labs/chronos page</div>; }

@@ -1,0 +1,1 @@
+export default function Page() { return <div>app/student/hostel page</div>; }
