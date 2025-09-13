@@ -1,3 +1,4 @@
+'use client';
 import AnimatedBackground from '../../../components/AnimatedBackground';
 import Navbar from '../../../components/Navbar';
 import Sidebar from '../../../components/Sidebar';
@@ -11,12 +12,13 @@ function DashboardCard({ title, children }: { title: string; children: React.Rea
 			{children}
 		</div>
 	);
-        
+}
 
-const tabs = [
-	{ key: 'main', label: 'Main Dashboard' },
-	{ key: 'events', label: 'Institutional Events' },
-];
+export default function AdminDashboardPage() {
+	const tabs = [
+		{ key: 'main', label: 'Main Dashboard' },
+		{ key: 'events', label: 'Institutional Events' },
+	];
 
 	const [activeTab, setActiveTab] = useState('main');
 	return (
@@ -66,27 +68,27 @@ const tabs = [
 							</DashboardCard>
 						</main>
 					)}
-						{activeTab === 'events' && (
-							<main className="grid grid-cols-1 md:grid-cols-2 gap-6">
-								<DashboardCard title="Events Timeline">
-									<div className="h-20 flex items-center justify-center text-gray-400">[Institutional Events Timeline Placeholder]</div>
-								</DashboardCard>
-								<DashboardCard title="Event Analytics">
-									<div className="text-sm">Attendance, Feedback, Success Metrics</div>
-								</DashboardCard>
-								<DashboardCard title="Organizer Tools">
-									<button className="px-4 py-2 bg-rose-600 text-white rounded">Launch Event Tool</button>
-								</DashboardCard>
-								<DashboardCard title="Announcements">
-									<ul className="text-xs list-disc ml-4">
-										<li>Upcoming: Science Expo</li>
-										<li>Recent: Annual Day</li>
-									</ul>
-								</DashboardCard>
-							</main>
-						)}
-						{/* End of tab content */}
-					</div>
+					{activeTab === 'events' && (
+						<main className="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<DashboardCard title="Events Timeline">
+								<div className="h-20 flex items-center justify-center text-gray-400">[Institutional Events Timeline Placeholder]</div>
+							</DashboardCard>
+							<DashboardCard title="Event Analytics">
+								<div className="text-sm">Attendance, Feedback, Success Metrics</div>
+							</DashboardCard>
+							<DashboardCard title="Organizer Tools">
+								<button className="px-4 py-2 bg-rose-600 text-white rounded">Launch Event Tool</button>
+							</DashboardCard>
+							<DashboardCard title="Announcements">
+								<ul className="text-xs list-disc ml-4">
+									<li>Upcoming: Science Expo</li>
+									<li>Recent: Annual Day</li>
+								</ul>
+							</DashboardCard>
+						</main>
+					)}
 				</div>
-			);
-		}
+			</div>
+		</div>
+	);
+}
