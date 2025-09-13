@@ -1,28 +1,22 @@
 import AnimatedBackground from '../../../components/AnimatedBackground';
 import Navbar from '../../../components/Navbar';
-import Sidebar from '../../../components/Sidebar';
-import NotificationsBar from '../../../components/NotificationsBar';
-
-function DashboardCard({ title, children }: { title: string; children: React.ReactNode }) {
-	return (
-		<div className="bg-white/80 rounded-xl shadow-lg p-6 flex flex-col gap-2 hover:scale-[1.02] transition-transform">
-			<h3 className="font-semibold text-lg mb-2">{title}</h3>
+// ...existing code...
+import AnimatedBackground from '../../../components/AnimatedBackground';
+import Navbar from '../../../components/Navbar';
+// ...existing code...
 			{children}
 		</div>
 	);
-                
+}
 
-
-import { useState } from 'react';
-
-const tabs = [
-	{ key: 'main', label: 'Main Dashboard' },
-	{ key: 'quantum', label: 'Quantum S³' },
-	{ key: 'metacognitive', label: 'Metacognitive Ecosystem' },
-	{ key: 'chronos', label: 'Chronos Scheduler' },
-	{ key: 'holographic', label: 'Holographic Profile' },
-];
-
+export default function StudentDashboardPage() {
+	const tabs = [
+		{ key: 'main', label: 'Main Dashboard' },
+		{ key: 'quantum', label: 'Quantum S³' },
+		{ key: 'metacognitive', label: 'Metacognitive Ecosystem' },
+		{ key: 'chronos', label: 'Chronos Scheduler' },
+		{ key: 'holographic', label: 'Holographic Profile' },
+	];
 	const [activeTab, setActiveTab] = useState('main');
 	return (
 		<div className="relative min-h-screen flex">
@@ -148,8 +142,8 @@ const tabs = [
 								{/* End of tab content */}
 							</div>
 						</div>
-					);
-				}
+					)}
+				</div>
 			</div>
 		</div>
 	);
