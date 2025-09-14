@@ -1,8 +1,10 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
 import cn from 'classnames';
 
-type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: 'primary' | 'accent'; };
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & MotionProps & {
+  variant?: 'primary' | 'accent';
+};
 
 export default function GlowyButton({ variant = 'primary', children, className, ...props }: Props) {
   const base = 'relative inline-flex items-center justify-center px-5 py-2 rounded-xl font-medium focus:outline-none focus:ring-4';

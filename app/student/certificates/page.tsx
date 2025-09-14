@@ -1,1 +1,0 @@
-export default function Page() { return <div>app/student/certificates page</div>; }

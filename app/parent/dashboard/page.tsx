@@ -10,7 +10,6 @@ function DashboardCard({ title, children }: { title: string; children: React.Rea
 			{children}
 		</div>
 	);
-
 }
 
 export default function ParentDashboard() {
@@ -23,11 +22,11 @@ export default function ParentDashboard() {
 				<Navbar />
 				<main className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					<DashboardCard title="Fee Summary & Payment History">
-						<div className="text-sm">Total Paid: ₹50,000<br/>Last Payment: 01/09/2025</div>
+						<div className="text-sm">Total Paid: ₹50,000<br />Last Payment: 01/09/2025</div>
 						<button className="mt-2 px-4 py-2 bg-blue-600 text-white rounded">View History</button>
 					</DashboardCard>
 					<DashboardCard title="Child's Academic Performance">
-						<div className="text-sm">Marks: 92%<br/>Rank: 3rd</div>
+						<div className="text-sm">Marks: 92%<br />Rank: 3rd</div>
 					</DashboardCard>
 					<DashboardCard title="Child's Attendance">
 						<div className="text-sm">Present: 180/200 days</div>
@@ -37,10 +36,11 @@ export default function ParentDashboard() {
 						<button className="ml-2 px-4 py-2 bg-green-600 text-white rounded">Email Report</button>
 					</DashboardCard>
 					<DashboardCard title="Linked Student Data">
-						<div className="text-xs">Student: S12345<br/>Name: John Doe</div>
+						<div className="text-xs">Student: S12345<br />Name: John Doe</div>
 						<button className="mt-2 px-4 py-2 bg-amber-500 text-white rounded">View Details</button>
 					</DashboardCard>
 				</main>
 			</div>
 		</div>
 	);
+}

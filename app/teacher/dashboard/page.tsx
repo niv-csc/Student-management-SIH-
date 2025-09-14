@@ -1,3 +1,5 @@
+"use client";
+
 import AnimatedBackground from '../../../components/AnimatedBackground';
 import Navbar from '../../../components/Navbar';
 import Sidebar from '../../../components/Sidebar';
@@ -11,12 +13,13 @@ function DashboardCard({ title, children }: { title: string; children: React.Rea
 			{children}
 		</div>
 	);
-        
+}
 
-const tabs = [
-	{ key: 'main', label: 'Main Dashboard' },
-	{ key: 'ai', label: 'AI Insights' },
-];
+export default function TeacherDashboard() {
+	const tabs = [
+		{ key: 'main', label: 'Main Dashboard' },
+		{ key: 'ai', label: 'AI Insights' },
+	];
 
 	const [activeTab, setActiveTab] = useState('main');
 	return (
@@ -44,10 +47,10 @@ const tabs = [
 								<div className="h-20 flex items-center justify-center text-gray-500">[Upload Widget Placeholder]</div>
 							</DashboardCard>
 							<DashboardCard title="Mark Attendance">
-								<div className="text-sm">Class: 10A<br/>Present: 32/35</div>
+								<div className="text-sm">Class: 10A<br />Present: 32/35</div>
 							</DashboardCard>
 							<DashboardCard title="Class Schedule & Curriculum">
-								<div className="text-xs">Next: Math - 10:00 AM<br/>Design: [Curriculum Placeholder]</div>
+								<div className="text-xs">Next: Math - 10:00 AM<br />Design: [Curriculum Placeholder]</div>
 							</DashboardCard>
 							<DashboardCard title="Announcements Panel">
 								<ul className="text-xs list-disc ml-4">
@@ -75,21 +78,22 @@ const tabs = [
 							</DashboardCard>
 						</main>
 					)}
-						{activeTab === 'ai' && (
-							<main className="grid grid-cols-1 md:grid-cols-2 gap-6">
-								<DashboardCard title="AI Data Insights">
-									<div className="h-20 flex items-center justify-center text-gray-400">[Experimental AI Insights Placeholder]</div>
-								</DashboardCard>
-								<DashboardCard title="Automated MCQ Correction">
-									<div className="h-20 flex items-center justify-center text-gray-400">[Automated Correction Experimental]</div>
-								</DashboardCard>
-								<DashboardCard title="Feedback Analytics">
-									<div className="text-sm">Advanced feedback rating and analysis.</div>
-								</DashboardCard>
-							</main>
-						)}
-						{/* End of tab content */}
-					</div>
+					{activeTab === 'ai' && (
+						<main className="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<DashboardCard title="AI Data Insights">
+								<div className="h-20 flex items-center justify-center text-gray-400">[Experimental AI Insights Placeholder]</div>
+							</DashboardCard>
+							<DashboardCard title="Automated MCQ Correction">
+								<div className="h-20 flex items-center justify-center text-gray-400">[Automated Correction Experimental]</div>
+							</DashboardCard>
+							<DashboardCard title="Feedback Analytics">
+								<div className="text-sm">Advanced feedback rating and analysis.</div>
+							</DashboardCard>
+						</main>
+					)}
+					{/* End of tab content */}
 				</div>
-			);
-		}
+			</div>
+		</div>
+	);
+}

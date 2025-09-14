@@ -1,3 +1,5 @@
+"use client";
+
 import AnimatedBackground from '../../../components/AnimatedBackground';
 import Navbar from '../../../components/Navbar';
 import Sidebar from '../../../components/Sidebar';
@@ -11,12 +13,13 @@ function DashboardCard({ title, children }: { title: string; children: React.Rea
 			{children}
 		</div>
 	);
-        
+}
 
-const tabs = [
-	{ key: 'main', label: 'Main Dashboard' },
-	{ key: 'events', label: 'Institutional Events' },
-];
+export default function AdminDashboard() {
+	const tabs = [
+		{ key: 'main', label: 'Main Dashboard' },
+		{ key: 'events', label: 'Institutional Events' },
+	];
 
 	const [activeTab, setActiveTab] = useState('main');
 	return (
@@ -41,7 +44,7 @@ const tabs = [
 					{activeTab === 'main' && (
 						<main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 							<DashboardCard title="Overview">
-								<div className="text-sm">Students: 1200<br/>Teachers: 80<br/>Admissions: 300<br/>Events: 12</div>
+								<div className="text-sm">Students: 1200<br />Teachers: 80<br />Admissions: 300<br />Events: 12</div>
 							</DashboardCard>
 							<DashboardCard title="Admission Management">
 								<button className="px-4 py-2 bg-blue-600 text-white rounded">Manage Admissions</button>
@@ -66,27 +69,28 @@ const tabs = [
 							</DashboardCard>
 						</main>
 					)}
-						{activeTab === 'events' && (
-							<main className="grid grid-cols-1 md:grid-cols-2 gap-6">
-								<DashboardCard title="Events Timeline">
-									<div className="h-20 flex items-center justify-center text-gray-400">[Institutional Events Timeline Placeholder]</div>
-								</DashboardCard>
-								<DashboardCard title="Event Analytics">
-									<div className="text-sm">Attendance, Feedback, Success Metrics</div>
-								</DashboardCard>
-								<DashboardCard title="Organizer Tools">
-									<button className="px-4 py-2 bg-rose-600 text-white rounded">Launch Event Tool</button>
-								</DashboardCard>
-								<DashboardCard title="Announcements">
-									<ul className="text-xs list-disc ml-4">
-										<li>Upcoming: Science Expo</li>
-										<li>Recent: Annual Day</li>
-									</ul>
-								</DashboardCard>
-							</main>
-						)}
-						{/* End of tab content */}
-					</div>
+					{activeTab === 'events' && (
+						<main className="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<DashboardCard title="Events Timeline">
+								<div className="h-20 flex items-center justify-center text-gray-400">[Institutional Events Timeline Placeholder]</div>
+							</DashboardCard>
+							<DashboardCard title="Event Analytics">
+								<div className="text-sm">Attendance, Feedback, Success Metrics</div>
+							</DashboardCard>
+							<DashboardCard title="Organizer Tools">
+								<button className="px-4 py-2 bg-rose-600 text-white rounded">Launch Event Tool</button>
+							</DashboardCard>
+							<DashboardCard title="Announcements">
+								<ul className="text-xs list-disc ml-4">
+									<li>Upcoming: Science Expo</li>
+									<li>Recent: Annual Day</li>
+								</ul>
+							</DashboardCard>
+						</main>
+					)}
+					{/* End of tab content */}
 				</div>
-			);
-		}
+			</div>
+		</div>
+	);
+}
