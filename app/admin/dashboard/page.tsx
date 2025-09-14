@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 "use client";
 
+=======
+'use client';
+>>>>>>> ab26bd08de6d206ac98c34fb88ac30cdae6209f9
 import AnimatedBackground from '../../../components/AnimatedBackground';
 import Navbar from '../../../components/Navbar';
 import Sidebar from '../../../components/Sidebar';
@@ -15,7 +19,11 @@ function DashboardCard({ title, children }: { title: string; children: React.Rea
 	);
 }
 
+<<<<<<< HEAD
 export default function AdminDashboard() {
+=======
+export default function AdminDashboardPage() {
+>>>>>>> ab26bd08de6d206ac98c34fb88ac30cdae6209f9
 	const tabs = [
 		{ key: 'main', label: 'Main Dashboard' },
 		{ key: 'events', label: 'Institutional Events' },
@@ -88,9 +96,16 @@ export default function AdminDashboard() {
 							</DashboardCard>
 						</main>
 					)}
+<<<<<<< HEAD
 					{/* End of tab content */}
+=======
+>>>>>>> ab26bd08de6d206ac98c34fb88ac30cdae6209f9
 				</div>
 			</div>
 		</div>
 	);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ab26bd08de6d206ac98c34fb88ac30cdae6209f9

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 "use client";
 
+=======
+'use client';
+>>>>>>> ab26bd08de6d206ac98c34fb88ac30cdae6209f9
 import Link from 'next/link';
 import { useState } from 'react';
 
